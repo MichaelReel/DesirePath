@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 
+# Gen tile data
 for index in range(64):
     region_x = index % 8
     region_y = int((index) / 8)
@@ -22,3 +23,9 @@ for index in range(64):
     print(f'{index}/shape_one_way_margin = 0.0')
     print(f'{index}/shapes = [  ]')
     print(f'{index}/z_index = 0')
+
+# Gen placement data
+data_string = ""
+for index in range(64):
+    data_string += f", {index}, {index}, 0"
+print(f"tile_data = PoolIntArray({data_string[1:]})")

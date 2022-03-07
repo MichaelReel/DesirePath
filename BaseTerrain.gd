@@ -5,6 +5,9 @@ onready var noise := OpenSimplexNoise.new()
 onready var tile_ids := []
 
 func _ready() -> void:
+	
+	var see_tile_data = self.tile_data
+	
 	noise.lacunarity = 3
 	noise.octaves = 4
 	noise.period = 32.0
